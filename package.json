@@ -11,6 +11,7 @@
   },
   "files": [
     "lib/",
+    "SECURITY.md",
     "cordis.patch.yml",
     "README.md"
   ],

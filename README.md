@@ -123,6 +123,12 @@ npm test
 发布名是 `dsh-memory-budget`：npm 上的 `dsh-memory` 已被他人占用，市场里的 `dsh-memory` 也已是另一个插件
 （`dsh-cc-haha-memory`）。本仓库与这两个项目无关。
 
+## 安全
+
+dsh.so 的启发式扫描会报两处：`lib/store.js:77` 的 `fs.writeFileSync`（原子写记忆文件）和 `lib/store.js:246` 读取
+`process.env`（计算默认目录）。它们各自的范围、为什么不越界、以及威胁模型都写在 [SECURITY.md](./SECURITY.md)——
+插件不联网、不起子进程、只碰 `<dir>/MEMORY.md` 与 `<dir>/USER.md`（外加 `.bak` / 瞬时 `.tmp`）。
+
 ## 许可证
 
 MIT，见 [LICENSE](./LICENSE)。
