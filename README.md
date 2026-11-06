@@ -117,3 +117,12 @@ npm test
 - 脚本方式：从 `cordis.patch.yml` 删掉那个 `- insert:` 块（或注释掉），删除 `node_modules\dsh-memory-budget`，重启。
 
 `memories\` 里的文件留着不影响。
+
+## 命名
+
+发布名是 `dsh-memory-budget`：npm 上的 `dsh-memory` 已被他人占用，市场里的 `dsh-memory` 也已是另一个插件
+（`dsh-cc-haha-memory`）。本仓库与这两个项目无关。
+
+## 许可证
+
+MIT，见 [LICENSE](./LICENSE)。
