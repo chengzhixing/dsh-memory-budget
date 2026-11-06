@@ -1,0 +1,55 @@
+{
+  "name": "dsh-memory-budget",
+  "version": "0.1.1",
+  "description": "Bounded long-term memory for DeepSeek Harness: MEMORY.md/USER.md with a hard character budget, a memory tool (add/replace/remove/consolidate), and a system-prompt section — the same model Hermes Agent uses.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./store": "./lib/store.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "long-term-memory"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.1.7-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.5",
+    "@deepseek-ai/schemastery": "3.18.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": ">=0.1.7-rc.1"
+    }
+  }
+}

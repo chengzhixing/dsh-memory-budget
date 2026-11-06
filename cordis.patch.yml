@@ -1,0 +1,11 @@
+# Bundle patch: loaded when this package is listed in a profile's
+# `dsh.profile.bundles`. It inserts the memory plugin into the host tree.
+- insert:
+    - id: memory
+      name: dsh-memory-budget
+      inject: [tools]
+      config:
+        memoryCharLimit: 4000
+        userCharLimit: 1500
+        promptOrder: 120
+        refreshOnWrite: true
