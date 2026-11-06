@@ -15,6 +15,14 @@
     "README.md"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengzhixing/dsh-memory-budget.git"
+  },
+  "homepage": "https://github.com/chengzhixing/dsh-memory-budget#readme",
+  "bugs": {
+    "url": "https://github.com/chengzhixing/dsh-memory-budget/issues"
+  },
   "scripts": {
     "test": "node --test"
   },
